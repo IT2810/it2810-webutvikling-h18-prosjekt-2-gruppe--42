@@ -6,9 +6,12 @@ class Media extends Component {
     constructor(props) {
         super(props)
         this.state = {text: "", image:""};
+        console.log("Media change")
     }
+
     componentDidMount() {
-        fetch("example.json").then(res => res.json() )
+        console.log(this.props.categories["text"][this.props.textCurrentCat][this.props.textCurrentFile], this.props.textCurrentCat)
+        fetch(this.props.categories["text"][this.props.textCurrentCat][this.props.textCurrentFile]).then(res => res.json() )
         .then(
             res => this.setState({'text':res.text})
         )
