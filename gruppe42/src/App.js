@@ -15,19 +15,22 @@ class App extends Component {
                         0: "Resources/Sound/buzz.mp3",
                         1: "Resources/Sound/cyberrace.mp3",
                         2: "Resources/Sound/desertshimmer.mp3",
-                        3: "Resources/Sound/funmusic.mp3"
+                        3: "Resources/Sound/funmusic.mp3",
+                        files:["Buzz", "Cyberrace", "Desert", "Fun"]
                     },
                     cat2: {
                         0: "Resources/Sound/goofymusic.mp3",
                         1: "Resources/Sound/melodyloopmix.mp3",
                         2: "Resources/Sound/musicbox.mp3",
-                        3: "Resources/Sound/musicboxmelody1.mp3"
+                        3: "Resources/Sound/musicboxmelody1.mp3",
+                        files:["Goofy", "Mix", "Box", "Melody"]
                     },
                     cat3: {
                         0: "Resources/Sound/mysticalmusic.mp3",
                         1: "Resources/Sound/narimasumusicfestival.mp3",
                         2: "Resources/Sound/obonfestivalmusic.mp3",
-                        3: "Resources/Sound/playfulmusic.mp3"
+                        3: "Resources/Sound/playfulmusic.mp3",
+                        files:["Mystical", "Narimasu", "Obon", "Playful"]
                     }
                 },
                 text: {
@@ -36,18 +39,21 @@ class App extends Component {
                         1: "Resources/Text/fifty-four.json",
                         2: "Resources/Text/fifty-four2.json",
                         3: "Resources/Text/fifty.json",
+                        files:["Grounded", "Redecorate", "Favors", "Waters"]
                     },
                     cat2: {
                         0: "Resources/Text/forty-five.json",
                         1: "Resources/Text/forty-five2.json",
                         2: "Resources/Text/forty-seven.json",
                         3: "Resources/Text/thirty-eight.json",
+                        files:["Pleasure", "Music", "Desert", "Beauty"]
                     },
                     cat3: {
                         0: "Resources/Text/thirty-five.json",
                         1: "Resources/Text/thirty-four.json",
                         2:"Resources/Text/thirty-nine.json",
                         3: "Resources/Text/thirty-one.json",
+                        files:["Joy", "Moonlight", "Lovely", "Singing"]
                     }
                 },
                 image: {
@@ -56,6 +62,7 @@ class App extends Component {
                         1: "Resources/Images/img2.svg",
                         2: "Resources/Images/img3.svg",
                         3: "Resources/Images/img4.svg",
+                        files:["Flower", "London2012", "Circle Tree", "Elephant"]
 
                     },
                     cat2: {
@@ -63,6 +70,7 @@ class App extends Component {
                         1: "Resources/Images/img6.svg",
                         2: "Resources/Images/img7.svg",
                         3: "Resources/Images/img8.svg",
+                        files:["Fancy Gear", "Tentacles", "Dragon", "Flower"]
 
                     },
                     cat3: {
@@ -70,6 +78,7 @@ class App extends Component {
                         1: "Resources/Images/img10.svg",
                         2: "Resources/Images/img11.svg",
                         3: "Resources/Images/img12.svg",
+                        files:["Butterfly", "5 Cogs", "Carpet", "Magic"]
 
                     },
                 }
@@ -122,7 +131,7 @@ class App extends Component {
 
             <div className="flex-container">
                 <div>
-                    <h1> This is a fancy title! </h1>
+                    <h1> {this.state.files.sound[this.state.soundCurrentCat].files[this.state.soundCurrentFile]} {this.state.files.image[this.state.imageCurrentCat].files[this.state.imageCurrentFile]} {this.state.files.text[this.state.textCurrentCat].files[this.state.textCurrentFile]}! </h1>
                 </div>
             </div>
 
