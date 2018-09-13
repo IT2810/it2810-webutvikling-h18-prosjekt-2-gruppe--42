@@ -8,6 +8,7 @@
 	background-color: lightblue;
 	border-radius: 25px;
 	padding: 10px;
+	background-color: #25283D;
 }
 
 .text{
@@ -16,4 +17,5 @@
 }
 .image{
 	grid-column: 1;
+	background-color: #FCF7F8;
 }

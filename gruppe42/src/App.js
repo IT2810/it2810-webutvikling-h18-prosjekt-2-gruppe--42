@@ -114,9 +114,7 @@ class App extends Component {
         return (<div className="App grid-container">
 
             <div className="flex-container grid-item">
-                <div>
                     <h1> This is a fancy title! </h1>
-                </div>
             </div>
 
             <div className="category grid-item">
