@@ -128,14 +128,13 @@ class App extends Component {
         let that = this
         console.log(this.state)
         return (<div className="App grid-container">
-
-            <div className="flex-container">
+            <div className="flex-container grid-item">
                 <div>
                     <h1> {this.state.files.sound[this.state.soundCurrentCat].files[this.state.soundCurrentFile]} {this.state.files.image[this.state.imageCurrentCat].files[this.state.imageCurrentFile]} {this.state.files.text[this.state.textCurrentCat].files[this.state.textCurrentFile]}! </h1>
                 </div>
             </div>
 
-            <div className="category">
+            <div className="category grid-item">
                 { Object.keys(this.state.files)
                 .map(category => <Categories category={ category } categories={ this.state.files } onChangeCategory={this.onChangeCategory}/>) }
             </div>

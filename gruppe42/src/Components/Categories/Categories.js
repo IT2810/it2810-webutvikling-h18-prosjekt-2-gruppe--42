@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Categories.css'
 
 
 class Categories extends Component {
@@ -21,9 +22,9 @@ class Categories extends Component {
   render() {
     return (
       <div className="Categories">
-        { this.props.category }
+        <h5 className="category-name">{ this.props.category }</h5>
         {  this.state.categories
-			    .map((i, x) => <button key={x} value={i} onClick={this.onHandleChangeCategory}>{i}</button>)
+			    .map((i, x) => <button className="category-buttons" key={x} value={i} onClick={this.onHandleChangeCategory}>{i}</button>)
        }	
       </div>
     );

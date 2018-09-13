@@ -1,25 +1,33 @@
-.App{
-	background-color: pink;
-}
+
 
 .grid-container{
 	display: grid;
 	grid-template-columns: auto auto auto;
 	grid-template-rows: auto auto;
-	background-color: lightgrey;
+	background-color: #90A8C3;
 	grid-gap: 20px;
 	padding: 20px;
+	height: 100vh;
+	color: white;
+
 
 }
 
 .grid-item{
-
+	border-radius: 25px;
+	background-color: lightblue;
+	padding: 10px;
+	background-color: #25283D;
 }
 
 .flex-container{
 	display: flex;
-	background-color: lightblue;
+	background-color: #25283D;
 	grid-column: 1 / 4;
+}
+
+h1{
+	margin: auto;
 }
 
 .category{
