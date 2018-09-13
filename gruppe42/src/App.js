@@ -12,15 +12,22 @@ class App extends Component {
             files: {
                 sound: {
                     cat1: {
-                        file1: "Resources/Sound/buzz.mp3",
-                        file2: "Resources/Sound/cyberrace.mp3",
-                        file3: "Resources/Sound/desertshimmer.mp3",
+                        Buzz: "Resources/Sound/buzz.mp3",
+                        Cyberrace: "Resources/Sound/cyberrace.mp3",
+                        Desertshimmer: "Resources/Sound/desertshimmer.mp3",
+                        Funmusic: "Resources/Sound/funmusic.mp3"
                     },
                     cat2: {
-                        file1: "Resources/Sound/funmusic.mp3"
+                        Goofymusic: "Resources/Sound/goofymusic.mp3",
+                        Loopmix: "Resources/Sound/melodyloopmix.mp3",
+                        Musicbox: "Resources/Sound/musicbox.mp3",
+                        MusicboxMelody: "Resources/Sound/musicboxmelody1.mp3"
                     },
                     cat3: {
-                        file1: ""
+                        Mystical: "Resources/Sound/mysticalmusic.mp3",
+                        Narimasu: "Resources/Sound/narimasumusicfestival.mp3",
+                        Obon: "Resources/Sound/obonfestivalmusic.mp3",
+                        Playful: "Resources/Sound/playfulmusic.mp3"
                     }
                 },
                 text: {
@@ -45,24 +52,24 @@ class App extends Component {
                 },
                 image: {
                     cat1: {
-                        file1: "Resources/Images/img1.svg",
-                        file2: "Resources/Images/img2.svg",
-                        file3: "Resources/Images/img3.svg",
-                        file4: "Resources/Images/img4.svg",
+                        Flower: "Resources/Images/img1.svg",
+                        London2012: "Resources/Images/img2.svg",
+                        Bush: "Resources/Images/img3.svg",
+                        Elephant: "Resources/Images/img4.svg",
 
                     },
                     cat2: {
-                        file1: "Resources/Images/img5.svg",
-                        file2: "Resources/Images/img6.svg",
-                        file3: "Resources/Images/img7.svg",
-                        file4: "Resources/Images/img8.svg",
+                        Pattern1: "Resources/Images/img5.svg",
+                        Pattern2: "Resources/Images/img6.svg",
+                        Dragon: "Resources/Images/img7.svg",
+                        Flower: "Resources/Images/img8.svg",
 
                     },
                     cat3: {
-                        file1: "Resources/Images/img9.svg",
-                        file2: "Resources/Images/img10.svg",
-                        file3: "Resources/Images/img11.svg",
-                        file4: "Resources/Images/img12.svg",
+                        Butterfly: "Resources/Images/img9.svg",
+                        Gears: "Resources/Images/img10.svg",
+                        Pattern: "Resources/Images/img11.svg",
+                        Stars: "Resources/Images/img12.svg",
 
                     },
                 }
@@ -71,8 +78,8 @@ class App extends Component {
             imageCurrentCat: "cat1",
             textCurrentCat: "cat1",
 
-            soundCurrentFile: "file1",
-            imageCurrentFile: "file1",
+            soundCurrentFile: "Buzz",
+            imageCurrentFile: "Flower",
             textCurrentFile: "file1",
         }
         // console.log(this.state)
