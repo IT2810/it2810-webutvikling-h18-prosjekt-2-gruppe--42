@@ -22,7 +22,7 @@ class Categories extends Component {
   render() {
     return (
       <div className="Categories">
-        <h5>{ this.props.category }</h5>
+        <h5 className="category-name">{ this.props.category }</h5>
         {  this.state.categories
 			    .map((i, x) => <button className="category-buttons" key={x} value={i} onClick={this.onHandleChangeCategory}>{i}</button>)
        }	
