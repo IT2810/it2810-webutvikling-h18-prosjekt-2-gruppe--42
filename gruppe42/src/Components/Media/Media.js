@@ -27,11 +27,11 @@ class Media extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         let that = this
+        document.getElementById("player").pause()
         if(prevState.sound !== this.props.categories['sound'][this.props.soundCurrentCat][this.props.soundCurrentFile] ){
             this.setState({sound:this.props.categories['sound'][this.props.soundCurrentCat][this.props.soundCurrentFile]})
-            //document.getElementById("player").pause()
             document.getElementById("player").load()
-            //document.getElementById("player").play()
+
         }
         if((prevProps.textCurrentCat !== this.props.textCurrentCat) || (prevProps.textCurrentFile !== this.props.textCurrentFile) ) {
             fetch(this.props.categories["text"][this.props.textCurrentCat][this.props.textCurrentFile]).then(res => res.json() )
@@ -52,6 +52,10 @@ class Media extends Component {
                 }
             }
             )
+
+            setTimeout(function () {
+                document.getElementById("player").play()
+            }, 150);
     }
 
   render() {
@@ -60,7 +64,7 @@ class Media extends Component {
       </audio>)
     return (
         <div className="media-grid-container">
-            
+
             <div className="media-grid-item image" dangerouslySetInnerHTML={{'__html':this.state.image}}>
             </div>
 
@@ -70,7 +74,8 @@ class Media extends Component {
                     {audio}
                 </div>
             </div>
-            
+            {audio}
+
         </div>
 
 
