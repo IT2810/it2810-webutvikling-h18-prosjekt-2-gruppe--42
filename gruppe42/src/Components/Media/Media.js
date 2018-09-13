@@ -31,7 +31,7 @@ class Media extends Component {
             this.setState({sound:this.props.categories['sound'][this.props.soundCurrentCat][this.props.soundCurrentFile]})
             //document.getElementById("player").pause()
             document.getElementById("player").load()
-            //document.getElementById("player").play()
+            document.getElementById("player").play()
         }
         if((prevProps.textCurrentCat !== this.props.textCurrentCat) || (prevProps.textCurrentFile !== this.props.textCurrentFile) ) {
             fetch(this.props.categories["text"][this.props.textCurrentCat][this.props.textCurrentFile]).then(res => res.json() )
