@@ -44,41 +44,40 @@ class Media extends Component {
             )
         }
 
-        if((prevProps.imageCurrentCat !== this.props.imageCurrentCat) || (prevProps.imageCurrentFile !== this.props.imageCurrentFile))
-            fetch(this.props.categories["image"][this.props.imageCurrentCat][this.props.imageCurrentFile]).then(res => res.text() )
+        if((prevProps.imageCurrentCat !== this.props.imageCurrentCat) 
+            || (prevProps.imageCurrentFile !== this.props.imageCurrentFile))
+            fetch(this.props.categories["image"][this.props.imageCurrentCat][this.props.imageCurrentFile]).then(res => res.text())
             .then(function(res){
                 if(prevState.image !== res) {
                     that.setState({image:res})
                 }
             }
-            )
+        )
 
-            setTimeout(function () {
-                document.getElementById("player").play()
-            }, 150);
+        setTimeout(function () {document.getElementById("player").play()}, 150);
     }
 
-  render() {
-      let audio = (<audio controls id="player">
-          <source src={this.state.sound}/>
-      </audio>)
-    return (
-        <div className="media-grid-container">
+    render() {
+        let audio = (
+            <audio controls id="player">
+            <source src={this.state.sound}/>
+            </audio>
+        )
+        return(
+            <div className="media-grid-container">
 
-            <div className="media-grid-item image" dangerouslySetInnerHTML={{'__html':this.state.image}}>
-            </div>
+                <div className="media-grid-item image" dangerouslySetInnerHTML={{'__html':this.state.image}}>
+                </div>
 
-            <div className="media-grid-item text">
-                {this.state.text}
-                <div>
-                    {audio}
+                <div className="media-grid-item text">
+                    {this.state.text}
+                    <div>
+                        {audio}
+                    </div>
                 </div>
             </div>
-        </div>
-
-
-    );
-  }
+         );
+    }
 }
 
 export default Media;

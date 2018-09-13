@@ -25,8 +25,8 @@ class Files extends Component {
     return (
       <div className="Files">
         {
-          Object.keys(this.state.Compositions)
-          .map((i, x) => <span><button key={x} value={i} onClick={this.onHandleChangeFile}>Let me see composition #{i}</button><br/></span>)
+          Object.keys(this.state.Compositions).map((i, x) => 
+            <span><button key={x} value={i} onClick={this.onHandleChangeFile}>Let me see composition #{i}</button><br/></span>)
         }
       </div>
     );
