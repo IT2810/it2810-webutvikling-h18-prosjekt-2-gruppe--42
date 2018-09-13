@@ -8,7 +8,7 @@ class Files extends Component {
         //console.log(this.props)
         this.onHandleChangeFile = this.onHandleChangeFile.bind(this)
     }
-
+    
     componentDidMount() {
       /*
       this.setState({categories: Object.keys(this.props.categories[this.props.category]),
@@ -23,7 +23,7 @@ class Files extends Component {
   render() {
     return (
       <div className="Files">
-        { 
+        {
           Object.keys(this.props.categories[this.props.type][this.props.category])
           .map((i, x) => <button key={x} value={i} onClick={this.onHandleChangeFile}>{i}</button>)
         }

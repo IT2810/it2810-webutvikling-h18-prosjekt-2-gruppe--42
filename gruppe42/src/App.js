@@ -28,25 +28,41 @@ class App extends Component {
                         file1: "Resources/Text/fifty-five.json",
                         file2: "Resources/Text/fifty-four.json",
                         file3: "Resources/Text/fifty-four2.json",
+                        file4: "Resources/Text/fifty.json",
                     },
                     cat2: {
-                        file1: "Resources/Text/fifty.json"
+                        file1: "Resources/Text/forty-five.json",
+                        file2: "Resources/Text/forty-five2.json",
+                        file3: "Resources/Text/forty-seven.json",
+                        file4: "Resources/Text/thirty-eight.json",
                     },
                     cat3: {
-                        file1: ""
+                        file1: "Resources/Text/thirty-five.json",
+                        file2: "Resources/Text/thirty-four.json",
+                        file3:"Resources/Text/thirty-nine.json",
+                        file4: "Resources/Text/thirty-one.json",
                     }
                 },
                 image: {
                     cat1: {
-                        file1: "Resources/Image/Dummy",
+                        file1: "Resources/Images/img1.svg",
+                        file2: "Resources/Images/img2.svg",
+                        file3: "Resources/Images/img3.svg",
+                        file4: "Resources/Images/img4.svg",
 
                     },
                     cat2: {
-                        file1: "Resources/Image/Dummy",
+                        file1: "Resources/Images/img5.svg",
+                        file2: "Resources/Images/img6.svg",
+                        file3: "Resources/Images/img7.svg",
+                        file4: "Resources/Images/img8.svg",
 
                     },
                     cat3: {
-                        file1: "Resources/Image/Dummy",
+                        file1: "Resources/Images/img9.svg",
+                        file2: "Resources/Images/img10.svg",
+                        file3: "Resources/Images/img11.svg",
+                        file4: "Resources/Images/img12.svg",
 
                     },
                 }
@@ -59,7 +75,7 @@ class App extends Component {
             imageCurrentFile: "file1",
             textCurrentFile: "file1",
         }
-        console.log(this.state)
+        // console.log(this.state)
         this.onChangeCategory = this.onChangeCategory.bind(this)
         this.onChangeFile = this.onChangeFile.bind(this)
     }
@@ -77,19 +93,19 @@ class App extends Component {
 
 	onChangeCategory(e) {
         let currentCat = e[0] + "CurrentCat"
-        console.log(e)
+        // console.log(e)
         this.setState({
             // The [currentCat] forces the key to be treated as a variable when being changed instead of the name currentCat itself
             [currentCat]: e[1]
-        },() => console.log(/*this.state*/)) // You can't use .then() after setState, but can add a callback after setState is done like this
+        }) // You can't use .then() after setState, but can add a callback after setState is done like this
     }
-    
-    onChangeFile(e) { 
+
+    onChangeFile(e) {
         //console.log(e)
         let currentFile = e[0] + "CurrentFile"
         this.setState({
             [currentFile]: e[1]
-        }, () => console.log(/*this.state*/))
+        })
     }
 
     render() {
@@ -123,6 +139,7 @@ class App extends Component {
                     })
                 }
             </div>
+
         </div>);
     }
 }
