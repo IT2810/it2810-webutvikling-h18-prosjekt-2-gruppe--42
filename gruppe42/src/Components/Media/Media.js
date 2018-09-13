@@ -59,11 +59,18 @@ class Media extends Component {
           <source src={this.state.sound}/>
       </audio>)
     return (
-      <div className="Media">
-        {this.state.text}
-        <div dangerouslySetInnerHTML={{'__html':this.state.image}} />
-        {audio}
-    </div>
+        <div className="media-grid-container">
+            
+            <div className="media-grid-item image" dangerouslySetInnerHTML={{'__html':this.state.image}}>
+            </div>
+
+            <div className="media-grid-item text">
+                {this.state.text}
+            </div>
+            
+        </div>
+
+
     );
   }
 }
