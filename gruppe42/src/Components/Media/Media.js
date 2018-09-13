@@ -74,8 +74,6 @@ class Media extends Component {
                     {audio}
                 </div>
             </div>
-            {audio}
-
         </div>
 
 
