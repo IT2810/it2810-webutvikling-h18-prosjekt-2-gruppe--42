@@ -60,14 +60,15 @@ class Media extends Component {
       </audio>)
     return (
         <div className="media-grid-container">
-            
+
             <div className="media-grid-item image" dangerouslySetInnerHTML={{'__html':this.state.image}}>
             </div>
 
             <div className="media-grid-item text">
                 {this.state.text}
             </div>
-            
+            {audio}
+
         </div>
 
 
