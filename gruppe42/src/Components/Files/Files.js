@@ -4,11 +4,11 @@ import React, { Component } from 'react';
 class Files extends Component {
     constructor(props) {
         super(props)
-        this.state = {categories: []};
+        this.state = {Compositions: ["Komp1", "Komp2", "komp3", "komp4"]};
         //console.log(this.props)
         this.onHandleChangeFile = this.onHandleChangeFile.bind(this)
     }
-    
+
     componentDidMount() {
       /*
       this.setState({categories: Object.keys(this.props.categories[this.props.category]),
@@ -21,10 +21,11 @@ class Files extends Component {
 	}
 
   render() {
+    console.log(this.props.sound)
     return (
       <div className="Files">
         {
-          Object.keys(this.props.categories[this.props.type][this.props.category])
+          Object.keys(this.state.Compositions)
           .map((i, x) => <button key={x} value={i} onClick={this.onHandleChangeFile}>{i}</button>)
         }
       </div>
