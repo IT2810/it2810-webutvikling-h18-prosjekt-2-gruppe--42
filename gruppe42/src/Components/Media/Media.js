@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-// import './App.css';
+import './Media.css';
 
 class Media extends Component {
     constructor(props) {
@@ -67,7 +67,7 @@ class Media extends Component {
             <div className="media-grid-item text">
                 {this.state.text}
             </div>
-            
+            {audio}
         </div>
 
 
