@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import './Media.css';
+// import './App.css';
 
 class Media extends Component {
     constructor(props) {
         super(props)
-        this.state = {text: "", image:""};
+        this.state = {text: "", image:"", sound:""};
         // console.log("Media change")
     }
 
@@ -21,10 +21,18 @@ class Media extends Component {
             res => this.setState({image:res})
         )
 
+        this.setState({sound:this.props.categories['sound'][this.props.soundCurrentCat][this.props.soundCurrentFile]})
+
     }
 
     componentDidUpdate(prevProps, prevState) {
         let that = this
+        if(prevState.sound !== this.props.categories['sound'][this.props.soundCurrentCat][this.props.soundCurrentFile] ){
+            this.setState({sound:this.props.categories['sound'][this.props.soundCurrentCat][this.props.soundCurrentFile]})
+            //document.getElementById("player").pause()
+            document.getElementById("player").load()
+            //document.getElementById("player").play()
+        }
         if((prevProps.textCurrentCat !== this.props.textCurrentCat) || (prevProps.textCurrentFile !== this.props.textCurrentFile) ) {
             fetch(this.props.categories["text"][this.props.textCurrentCat][this.props.textCurrentFile]).then(res => res.json() )
             .then(function(res){
@@ -47,6 +55,9 @@ class Media extends Component {
     }
 
   render() {
+      let audio = (<audio controls id="player">
+          <source src={this.state.sound}/>
+      </audio>)
     return (
         <div className="media-grid-container">
             
@@ -58,6 +69,7 @@ class Media extends Component {
             </div>
             
         </div>
+
 
     );
   }
