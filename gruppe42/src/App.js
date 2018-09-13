@@ -113,13 +113,13 @@ class App extends Component {
         console.log(this.state)
         return (<div className="App grid-container">
 
-            <div className="flex-container">
+            <div className="flex-container grid-item">
                 <div>
                     <h1> This is a fancy title! </h1>
                 </div>
             </div>
 
-            <div className="category">
+            <div className="category grid-item">
                 { Object.keys(this.state.files)
                 .map(category => <Categories category={ category } categories={ this.state.files } onChangeCategory={this.onChangeCategory}/>) }
             </div>

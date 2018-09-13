@@ -13,7 +13,9 @@
 }
 
 .grid-item{
-
+	border-radius: 25px;
+	background-color: lightblue;
+	padding: 10px;
 }
 
 .flex-container{

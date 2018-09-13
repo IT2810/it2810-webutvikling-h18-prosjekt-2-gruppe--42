@@ -66,8 +66,11 @@ class Media extends Component {
 
             <div className="media-grid-item text">
                 {this.state.text}
+                <div>
+                    {audio}
+                </div>
             </div>
-            {audio}
+            
         </div>
 
 
