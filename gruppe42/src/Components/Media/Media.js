@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-// import './App.css';
+import './Media.css';
 
 class Media extends Component {
     constructor(props) {
@@ -25,10 +25,14 @@ class Media extends Component {
 
   render() {
     return (
-      <div className="Media">
-        {this.state.text}
-        <svg dangerouslySetInnerHTML={{'__html':this.state.image}} />
-      </div>
+        <div className="media-grid-container">
+            <div className="media-grid-item text">
+                {this.state.text}
+            </div>
+            <div className="media-grid-item image">
+                <svg dangerouslySetInnerHTML={{'__html':this.state.image}} />
+            </div>
+        </div>
     );
   }
 }

@@ -95,19 +95,34 @@ class App extends Component {
     render() {
         let that = this
         console.log(this.state)
-        return (<div className="App">
-            <Media categories={this.state.files} textCurrentCat={this.state.textCurrentCat} textCurrentFile={this.state.textCurrentFile} soundCurrentCat={this.statesoundCurrentCat} soundCurrentFile={this.state.soundCurrentFile} imageCurrentCat={this.state.imageCurrentCat} imageCurrentFile={this.state.imageCurrentFile}/>
-            {/* <Categories/> */}
-            { Object.keys(this.state.files)
+        return (<div className="App grid-container">
+            
+            <div className="flex-container">
+                <div>
+                    <h1> This is a fancy title! </h1>
+                </div>
+            </div>
+
+            <div className="category">
+                { Object.keys(this.state.files)
                 .map(category => <Categories category={ category } categories={ this.state.files } onChangeCategory={this.onChangeCategory}/>) }
-            { Object.keys(this.state.files).map(
-                // Curse this function. Requires the use of that = this    
-                function(type){
-                    return Object.keys(that.state.files[type])
-                    .filter(cat => cat == that.state[type + "CurrentCat"])
-                    .map(cat => <Files category={cat} type={type} categories={that.state.files} onChangeFile={that.onChangeFile} />)
-                })
-            }
+            </div>
+
+            <div className="media">
+                <Media categories={this.state.files} textCurrentCat={this.state.textCurrentCat} textCurrentFile={this.state.textCurrentFile} soundCurrentCat={this.statesoundCurrentCat} soundCurrentFile={this.state.soundCurrentFile} imageCurrentCat={this.state.imageCurrentCat} imageCurrentFile={this.state.imageCurrentFile}/>
+                {/* <Categories/> */}
+            </div>
+
+            <div className="files">
+                { Object.keys(this.state.files).map(
+                    // Curse this function. Requires the use of that = this    
+                    function(type){
+                        return Object.keys(that.state.files[type])
+                        .filter(cat => cat == that.state[type + "CurrentCat"])
+                        .map(cat => <Files category={cat} type={type} categories={that.state.files} onChangeFile={that.onChangeFile} />)
+                    })
+                }
+            </div>
         </div>);
     }
 }
