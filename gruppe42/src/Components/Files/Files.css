@@ -7,11 +7,6 @@
     background:inherit;
 }
 
-.files.grid-item:first-child
-{
-    border-top-left-radius: 25%;
-}
-
 .composition-button {
     display: inline;
     margin: auto;
@@ -36,4 +31,13 @@
 
 .composition-button-span {
     margin: auto;
+}
+
+.composition-button:first-of-type{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+.composition-button:last-of-type{
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
