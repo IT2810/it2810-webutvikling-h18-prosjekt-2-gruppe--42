@@ -1,21 +1,29 @@
-.media-grid-container{
+.media-grid-container {
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-column-gap: 20px;
+	background-color: #c4c4c4
 }
 
-.media-grid-item{
+.media-grid-item {
 	background-color: lightblue;
 	border-radius: 25px;
 	padding: 10px;
 	background-color: #25283D;
 }
 
-.text{
+.text {
 	grid-column: 2;
+	padding: 2%;
 
 }
-.image{
+.image {
 	grid-column: 1;
 	background-color: #FCF7F8;
+}
+
+@media only screen and (max-width: 600px) {
+	#player {
+		width: 50%;
+	}
 }

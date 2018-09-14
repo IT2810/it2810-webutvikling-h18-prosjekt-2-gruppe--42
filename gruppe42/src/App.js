@@ -128,6 +128,7 @@ class App extends Component {
         let that = this
         console.log(this.state)
         return (<div className="App grid-container">
+            <div className="grid-container">
             <div className="flex-container grid-item">
                     <h1> 
                         {this.state.files.sound[this.state.soundCurrentCat].files[this.state.soundCurrentFile]} 
@@ -152,10 +153,9 @@ class App extends Component {
                 soundCurrentFile={this.state.soundCurrentFile} 
                 imageCurrentCat={this.state.imageCurrentCat} 
                 imageCurrentFile={this.state.imageCurrentFile}/>
-                {/* <Categories/> */}
             </div>
 
-            <div className="files">
+            <div className="files grid-item">
                 {/* { Object.keys(this.state.files).map(
                     // Curse this function. Requires the use of that = this
                     function(type){
@@ -172,7 +172,7 @@ class App extends Component {
                     text={this.state.files['text'][this.state.textCurrentCat]}
                     onChangeFile={that.onChangeFile} />
             </div>
-
+            </div>
         </div>);
     }
 }

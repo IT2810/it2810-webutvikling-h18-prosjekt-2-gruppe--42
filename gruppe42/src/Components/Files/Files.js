@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Files.css';
 
 
 class Files extends Component {
@@ -9,24 +10,16 @@ class Files extends Component {
         this.onHandleChangeFile = this.onHandleChangeFile.bind(this)
     }
 
-    componentDidMount() {
-      /*
-      this.setState({categories: Object.keys(this.props.categories[this.props.category]),
-        category: this.props.category})
-        */
-    }
-
 	onHandleChangeFile(e) {
 		this.props.onChangeFile([this.props.type, e.target.value])
 	}
 
   render() {
-    console.log(this.props.sound)
     return (
       <div className="Files">
         {
           Object.keys(this.state.Compositions).map((i, x) => 
-            <span><button key={x} value={i} onClick={this.onHandleChangeFile}>Let me see composition #{i}</button><br/></span>)
+            <span classname="composition-button-span"><button className="composition-button" key={x} value={i} onClick={this.onHandleChangeFile}>Let me see composition #{i}</button></span>)
         }
       </div>
     );

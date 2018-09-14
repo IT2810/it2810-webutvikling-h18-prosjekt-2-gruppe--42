@@ -1,0 +1,12 @@
+.Files {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.composition-button {
+    display: inline;
+    margin: auto;
+}
+.composition-button-span {
+    margin: auto;
+}
