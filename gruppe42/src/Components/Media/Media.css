@@ -2,7 +2,8 @@
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-column-gap: 20px;
-	background-color: #c4c4c4
+	background-color: #c4c4c4;
+    /* border-radius:25%; */
 }
 
 .media-grid-item {
