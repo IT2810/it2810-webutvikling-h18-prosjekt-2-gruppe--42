@@ -37,6 +37,8 @@ h1 {
 .category {
 	grid-column: 1;
 	grid-row: 2 / 4;
+	overflow: hidden;
+	min-width: 50px;
 }
 
 .files {
@@ -50,5 +52,5 @@ h1 {
 }
 
 .media-grid-item{
-    white-space:pre-wrap;
+	white-space:pre-wrap;
 }

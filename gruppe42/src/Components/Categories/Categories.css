@@ -1,13 +1,17 @@
 .category-buttons{
 	display: block;
 	border-radius: 5px;
-    width:50%;
     margin-left:auto;
     margin-right:auto;
     margin-top: 5px;
     margin-bottom:5px;
     background-color:lightblue;
     border:none;
+    text-align: center;
+    width: 90%;
+    overflow: hidden;
+    font-size: 9pt;
+    min-width: 70px;    
 }
 
 .category-buttons:hover{
