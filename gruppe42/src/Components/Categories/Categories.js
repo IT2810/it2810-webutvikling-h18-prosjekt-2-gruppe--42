@@ -11,8 +11,10 @@ class Categories extends Component {
     }
 
     componentDidMount() {
-      this.setState({categories: Object.keys(this.props.categories[this.props.category]),
-        category: this.props.category})
+      this.setState( {
+        categories: Object.keys(this.props.categories[this.props.category]),
+        category: this.props.category}
+        )
     }
 
 	onHandleChangeCategory(e) {
@@ -23,8 +25,12 @@ class Categories extends Component {
     return (
       <div className="Categories">
         <h5 className="category-name">{ this.props.category }</h5>
-        {  this.state.categories
-			    .map((i, x) => <button className="category-buttons" key={x} value={i} onClick={this.onHandleChangeCategory}>{i}</button>)
+        {  this.state.categories.map((i, x) => 
+            <button 
+            className="category-buttons" 
+            key={x} 
+            value={i} 
+            onClick={this.onHandleChangeCategory}> {i} </button>)
        }	
       </div>
     );

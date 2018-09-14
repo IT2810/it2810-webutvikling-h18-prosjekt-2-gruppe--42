@@ -109,7 +109,7 @@ class App extends Component {
 
 	onChangeCategory(e) {
         let currentCat = e[0] + "CurrentCat"
-        // console.log(e)
+        console.log(e,' cat')
         this.setState({
             // The [currentCat] forces the key to be treated as a variable when being changed instead of the name currentCat itself
             [currentCat]: e[1]
@@ -128,35 +128,51 @@ class App extends Component {
         let that = this
         console.log(this.state)
         return (<div className="App grid-container">
+            <div className="grid-container">
             <div className="flex-container grid-item">
-                <div>
-                    <h1> {this.state.files.sound[this.state.soundCurrentCat].files[this.state.soundCurrentFile]} {this.state.files.image[this.state.imageCurrentCat].files[this.state.imageCurrentFile]} {this.state.files.text[this.state.textCurrentCat].files[this.state.textCurrentFile]}! </h1>
-                </div>
+                    <h1> 
+                        {this.state.files.sound[this.state.soundCurrentCat].files[this.state.soundCurrentFile]} 
+                        {this.state.files.image[this.state.imageCurrentCat].files[this.state.imageCurrentFile]} 
+                        {this.state.files.text[this.state.textCurrentCat].files[this.state.textCurrentFile]}! 
+                    </h1>
             </div>
 
             <div className="category grid-item">
-                { Object.keys(this.state.files)
-                .map(category => <Categories category={ category } categories={ this.state.files } onChangeCategory={this.onChangeCategory}/>) }
+                { Object.keys(this.state.files).map(category => 
+                    <Categories category={ category } 
+                                categories= { this.state.files } 
+                                onChangeCategory={this.onChangeCategory}/>) }
             </div>
 
             <div className="media">
-                <Media categories={this.state.files} textCurrentCat={this.state.textCurrentCat} textCurrentFile={this.state.textCurrentFile} soundCurrentCat={this.state.soundCurrentCat} soundCurrentFile={this.state.soundCurrentFile} imageCurrentCat={this.state.imageCurrentCat} imageCurrentFile={this.state.imageCurrentFile}/>
-                {/* <Categories/> */}
+                <Media 
+                categories={this.state.files} 
+                textCurrentCat={this.state.textCurrentCat} 
+                textCurrentFile={this.state.textCurrentFile} 
+                soundCurrentCat={this.state.soundCurrentCat} 
+                soundCurrentFile={this.state.soundCurrentFile} 
+                imageCurrentCat={this.state.imageCurrentCat} 
+                imageCurrentFile={this.state.imageCurrentFile}/>
             </div>
 
-            <div className="files">
+            <div className="files grid-item">
                 {/* { Object.keys(this.state.files).map(
                     // Curse this function. Requires the use of that = this
                     function(type){
-                        return Object.keys(that.state.files[type])
-                        .filter(cat => cat == that.state[type + "CurrentCat"])
-                        .map(cat => <Files category={cat} type={type} categories={that.state.files} onChangeFile={that.onChangeFile} />)
+                        return Object.keys(that.state.files[type]).filter(cat => cat == that.state[type 
+                            + "CurrentCat"]).map(cat => <Files 
+                            category={cat} type={type} 
+                            categories={that.state.files} 
+                            onChangeFile={that.onChangeFile} />)
                     })
                 } */}
-                <Files sound={this.state.files['sound'][this.state.soundCurrentCat]} image={this.state.files['image'][this.state.imageCurrentCat]} text={this.state.files['text'][this.state.textCurrentCat]}
-                onChangeFile={that.onChangeFile} />
+                <Files 
+                    sound={this.state.files['sound'][this.state.soundCurrentCat]} 
+                    image={this.state.files['image'][this.state.imageCurrentCat]} 
+                    text={this.state.files['text'][this.state.textCurrentCat]}
+                    onChangeFile={that.onChangeFile} />
             </div>
-
+            </div>
         </div>);
     }
 }

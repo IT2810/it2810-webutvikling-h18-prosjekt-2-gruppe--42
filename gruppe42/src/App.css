@@ -1,40 +1,54 @@
+.App {
+	min-width: 100vw;
+	min-height: 100vh;
+}
 
-
-.grid-container{
+.grid-container {
 	display: grid;
-	grid-template-columns: auto auto auto;
-	grid-template-rows: auto auto;
+	grid-template-columns: 10% auto;
+	grid-template-rows: 15% 15% 1fr;
 	background-color: #90A8C3;
 	grid-gap: 20px;
-	padding: 20px;
-	height: 100vh;
 	color: white;
-
-
+	min-width: 100vw;
+	min-height: 100vh;
 }
 
-.grid-item{
-	border-radius: 25px;
+
+
+.grid-item {
+	border-radius: 1em;
 	background-color: lightblue;
-	padding: 10px;
+	margin: 0.5em;
+	padding: 0.5em;
 	background-color: #25283D;
 }
 
-.flex-container{
+.flex-container {
 	display: flex;
-	background-color: #25283D;
 	grid-column: 1 / 4;
+	grid-row: 1;
 }
 
-h1{
+h1 {
 	margin: auto;
 }
 
-.category{
+.category {
 	grid-column: 1;
+	grid-row: 2 / 4;
+}
+
+.files {
+	grid-column: 2;
 	grid-row: 2;
 }
 
-.files{
-	grid-column: 3;
+.media {
+	grid-column: 2;
+	grid-row: 3 / 4;
+}
+
+.media-grid-item{
+    white-space:pre-wrap;
 }
