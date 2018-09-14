@@ -1,7 +1,23 @@
 .category-buttons{
 	display: block;
 	border-radius: 5px;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5px;
+    margin-bottom:5px;
+    background-color:lightblue;
+    border:none;
+}
+
+.category-buttons:hover{
+    background-color:lightpink;
+}
+.category-buttons:active{
+    background-color:red;
 }
 
 .category-name{
+    text-align:center;
+    margin:2px;
 }

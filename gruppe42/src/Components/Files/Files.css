@@ -6,7 +6,19 @@
 .composition-button {
     display: inline;
     margin: auto;
+    background-color:lightblue;
+    border:none;
+
+
 }
+
+.composition-button:hover{
+    background-color:lightpink;
+}
+.composition-button:active{
+    background-color:red;
+}
+
 .composition-button-span {
     margin: auto;
 }
