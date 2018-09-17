@@ -44,7 +44,7 @@ class Media extends Component {
             )
         }
 
-        if((prevProps.imageCurrentCat !== this.props.imageCurrentCat) 
+        if((prevProps.imageCurrentCat !== this.props.imageCurrentCat)
             || (prevProps.imageCurrentFile !== this.props.imageCurrentFile))
             fetch(this.props.categories["image"][this.props.imageCurrentCat][this.props.imageCurrentFile]).then(res => res.text())
             .then(function(res){
@@ -63,20 +63,16 @@ class Media extends Component {
             <source src={this.state.sound}/>
             </audio>
         )
-        return(
-            <div className="media-grid-container">
-
-                <div className="media-grid-item image" dangerouslySetInnerHTML={{'__html':this.state.image}}>
-                </div>
-
-                <div className="media-grid-item text">
+        return([
+                (<div className="grid-item image" dangerouslySetInnerHTML={{'__html':this.state.image}}>
+                </div>),
+                (<div className="grid-item text">
                     {this.state.text}
                     <div>
                         {audio}
                     </div>
-                </div>
-            </div>
-         );
+                </div>)
+         ]);
     }
 }
 

@@ -1,26 +1,26 @@
-.media-grid-container {
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-column-gap: 20px;
-	background-color: #c4c4c4;
-    border-radius: 25%;
-}
-
-.media-grid-item {
-	background-color: lightblue;
-	border-radius: 25px;
-	padding: 10px;
-	background-color: #25283D;
-}
-
 .text {
-	grid-column: 2;
+
+	grid-column: 3;
+    grid-row:3;
 	padding: 2%;
+    white-space:pre-wrap;
+    text-align:center;
+    padding:20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
 
 }
 .image {
-	grid-column: 1;
+	grid-column: 2;
+    grid-row: 3;
 	background-color: #FCF7F8;
+}
+
+#player {
+    margin-top:20px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -28,7 +28,7 @@
 		/* width: 50%; */
 	}
     .text{
-        grid-column:1;
-        grid-row: 2;
+        grid-column:2;
+        grid-row: 4;
     }
 }

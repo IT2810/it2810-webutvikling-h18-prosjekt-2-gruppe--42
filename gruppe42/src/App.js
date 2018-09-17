@@ -130,45 +130,45 @@ class App extends Component {
         return (<div className="App grid-container">
             <div className="grid-container">
             <div className="flex-container grid-item">
-                    <h1> 
-                        {this.state.files.sound[this.state.soundCurrentCat].files[this.state.soundCurrentFile]} 
-                        {this.state.files.image[this.state.imageCurrentCat].files[this.state.imageCurrentFile]} 
-                        {this.state.files.text[this.state.textCurrentCat].files[this.state.textCurrentFile]}! 
+                    <h1>
+                        {this.state.files.sound[this.state.soundCurrentCat].files[this.state.soundCurrentFile]}
+                        {this.state.files.image[this.state.imageCurrentCat].files[this.state.imageCurrentFile]}
+                        {this.state.files.text[this.state.textCurrentCat].files[this.state.textCurrentFile]}!
                     </h1>
             </div>
 
             <div className="category grid-item">
-                { Object.keys(this.state.files).map(category => 
-                    <Categories category={ category } 
-                                categories= { this.state.files } 
+                { Object.keys(this.state.files).map(category =>
+                    <Categories category={ category }
+                                categories= { this.state.files }
                                 onChangeCategory={this.onChangeCategory}/>) }
             </div>
 
-            <div className="media">
-                <Media 
-                categories={this.state.files} 
-                textCurrentCat={this.state.textCurrentCat} 
-                textCurrentFile={this.state.textCurrentFile} 
-                soundCurrentCat={this.state.soundCurrentCat} 
-                soundCurrentFile={this.state.soundCurrentFile} 
-                imageCurrentCat={this.state.imageCurrentCat} 
+            {/* <div className="media"> */}
+                <Media
+                categories={this.state.files}
+                textCurrentCat={this.state.textCurrentCat}
+                textCurrentFile={this.state.textCurrentFile}
+                soundCurrentCat={this.state.soundCurrentCat}
+                soundCurrentFile={this.state.soundCurrentFile}
+                imageCurrentCat={this.state.imageCurrentCat}
                 imageCurrentFile={this.state.imageCurrentFile}/>
-            </div>
+            {/* </div> */}
 
             <div className="files grid-item">
                 {/* { Object.keys(this.state.files).map(
                     // Curse this function. Requires the use of that = this
                     function(type){
-                        return Object.keys(that.state.files[type]).filter(cat => cat == that.state[type 
-                            + "CurrentCat"]).map(cat => <Files 
-                            category={cat} type={type} 
-                            categories={that.state.files} 
+                        return Object.keys(that.state.files[type]).filter(cat => cat == that.state[type
+                            + "CurrentCat"]).map(cat => <Files
+                            category={cat} type={type}
+                            categories={that.state.files}
                             onChangeFile={that.onChangeFile} />)
                     })
                 } */}
-                <Files 
-                    sound={this.state.files['sound'][this.state.soundCurrentCat]} 
-                    image={this.state.files['image'][this.state.imageCurrentCat]} 
+                <Files
+                    sound={this.state.files['sound'][this.state.soundCurrentCat]}
+                    image={this.state.files['image'][this.state.imageCurrentCat]}
                     text={this.state.files['text'][this.state.textCurrentCat]}
                     onChangeFile={that.onChangeFile} />
             </div>
