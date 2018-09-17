@@ -22,7 +22,7 @@ class Files extends Component {
         {
           Object.keys(this.state.Compositions).map((i, x) =>
             // <span classname= "composition-button-span">
-                <button className={this.state.active === i ? "composition-button activeComp" : "composition-button" } key={x} value={i} onClick={this.onHandleChangeFile}>Combo #{parseInt(i,10) + 1}
+                <button className={parseInt(this.state.active, 10) === parseInt(i, 10) ? "composition-button activeComp" : "composition-button" } key={x} value={i} onClick={this.onHandleChangeFile}>Combo #{parseInt(i,10) + 1}
                 </button>
             // </span>)
         )
