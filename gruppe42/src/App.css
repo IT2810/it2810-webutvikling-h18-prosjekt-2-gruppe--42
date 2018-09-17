@@ -1,3 +1,6 @@
+body{
+    background-color:#90A8C3;
+}
 .App {
 	min-width: 100vw;
 	min-height: 100vh;
@@ -5,8 +8,8 @@
 
 .grid-container {
 	display: grid;
-	grid-template-columns: 10% auto;
-	grid-template-rows: 15% 15% 1fr;
+	grid-template-columns: 10% 1fr;
+	grid-template-rows: 15% 15% 15% 15% 1fr ;
 	background-color: #90A8C3;
 	grid-gap: 20px;
 	color: white;
@@ -20,7 +23,7 @@
 	border-radius: 1em;
 	background-color: lightblue;
 	margin: 0.5em;
-	padding: 0.5em;
+	/* padding: 0.5em; */
 	background-color: #25283D;
 }
 
@@ -36,7 +39,9 @@ h1 {
 
 .category {
 	grid-column: 1;
-	grid-row: 2 / 4;
+	grid-row: 2 / 5;
+	overflow: hidden;
+	min-width: 50px;
 }
 
 .files {
@@ -44,11 +49,18 @@ h1 {
 	grid-row: 2;
 }
 
-.media {
-	grid-column: 2;
-	grid-row: 3 / 4;
+@media only screen and (max-width: 800px) {
+	.grid-container {
+        grid-template-columns: 40% auto;
+    }
 }
 
-.media-grid-item{
-    white-space:pre-wrap;
-}
+
+/* .media {
+	grid-column: 2;
+	grid-row: 3 / 4;
+} */
+
+/* .media-grid-item{
+	white-space:pre-wrap;
+} */
