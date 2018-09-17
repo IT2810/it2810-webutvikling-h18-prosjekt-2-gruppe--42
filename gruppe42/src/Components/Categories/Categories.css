@@ -1,17 +1,18 @@
 .category-buttons{
 	display: block;
-    margin-left:0;
-    margin-right:0t;
-    margin-top: 5px;
-    margin-bottom:5px;
-    background-color:lightblue;
-    border:none;
-    text-align: center;
+    /* margin-left:0; */
+    /* margin-right:0t; */
+    /* margin-top: 5px; */
+    /* margin-bottom:5px; */
+    background-color:#25283D;
+    border: none;
+    text-align: left;
     width: 100%;
     overflow: hidden;
-    font-size: 9pt;
-    min-width: 70px;
-    height:100%;
+    font-size: 10pt;
+    min-width: 80px;
+    color: white;
+    padding: 8px 15px 8px 10px;
 }
 
 .category-buttons:hover{
@@ -21,7 +22,13 @@
     background-color:red;
 }
 
+.active-cat{
+    background-color: lightblue;
+}
+
 .category-name{
-    text-align:center;
-    margin:2px;
+    text-align:left;
+    padding: 8px 15px 8px 10px;
+    margin-top:10px;
+    margin-bottom: 1px;
 }
