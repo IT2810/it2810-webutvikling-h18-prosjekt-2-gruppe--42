@@ -31,6 +31,9 @@ class App extends Component {
                         2: "Resources/Sound/obonfestivalmusic.mp3",
                         3: "Resources/Sound/playfulmusic.mp3",
                         files:["Mystical", "Narimasu", "Obon", "Playful"]
+                    },
+                    Tull: {
+                        0:"Rull",
                     }
                 },
                 text: {
@@ -119,11 +122,12 @@ class App extends Component {
     render() {
         return (<div className="App">
             <div className="grid-container">
-            <div className="flex-container grid-item">
+            <div className="flex-container">
                     <h1>
                         {this.state.files.sound[this.state.soundCurrentCat].files[this.state.soundCurrentFile]}
                         {this.state.files.image[this.state.imageCurrentCat].files[this.state.imageCurrentFile]}
                         {this.state.files.text[this.state.textCurrentCat].files[this.state.textCurrentFile]}!
+                        <hr></hr>
                     </h1>
             </div>
 
