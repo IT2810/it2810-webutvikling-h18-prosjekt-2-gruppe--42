@@ -11,21 +11,21 @@ class App extends Component {
         this.state = {
             files: {
                 sound: {
-                    Category1: {
+                    Space: {
                         0: "Resources/Sound/buzz.mp3",
                         1: "Resources/Sound/cyberrace.mp3",
                         2: "Resources/Sound/desertshimmer.mp3",
                         3: "Resources/Sound/funmusic.mp3",
                         files:["Buzz", "Cyberrace", "Desert", "Fun"]
                     },
-                    Category2: {
+                    Circus: {
                         0: "Resources/Sound/goofymusic.mp3",
                         1: "Resources/Sound/melodyloopmix.mp3",
                         2: "Resources/Sound/musicbox.mp3",
                         3: "Resources/Sound/musicboxmelody1.mp3",
                         files:["Goofy", "Mix", "Box", "Melody"]
                     },
-                    Category3: {
+                    Mystical: {
                         0: "Resources/Sound/mysticalmusic.mp3",
                         1: "Resources/Sound/narimasumusicfestival.mp3",
                         2: "Resources/Sound/obonfestivalmusic.mp3",
@@ -34,21 +34,21 @@ class App extends Component {
                     }
                 },
                 text: {
-                    Category1: {
+                    Fifty: {
                         0: "Resources/Text/fifty-five.json",
                         1: "Resources/Text/fifty-four.json",
                         2: "Resources/Text/fifty-four2.json",
                         3: "Resources/Text/fifty.json",
                         files:["Grounded", "Redecorate", "Favors", "Waters"]
                     },
-                    Category2: {
+                    Forty: {
                         0: "Resources/Text/forty-five.json",
                         1: "Resources/Text/forty-five2.json",
                         2: "Resources/Text/forty-seven.json",
                         3: "Resources/Text/thirty-eight.json",
                         files:["Pleasure", "Music", "Desert", "Beauty"]
                     },
-                    Category3: {
+                    Thirty: {
                         0: "Resources/Text/thirty-five.json",
                         1: "Resources/Text/thirty-four.json",
                         2:"Resources/Text/thirty-nine.json",
@@ -57,7 +57,7 @@ class App extends Component {
                     }
                 },
                 image: {
-                    Category1: {
+                    Savannah: {
                         0: "Resources/Images/img1.svg",
                         1: "Resources/Images/img2.svg",
                         2: "Resources/Images/img3.svg",
@@ -65,7 +65,7 @@ class App extends Component {
                         files:["Flower", "London2012", "Circle Tree", "Elephant"]
 
                     },
-                    Category2: {
+                    Fractals: {
                         0: "Resources/Images/img5.svg",
                         1: "Resources/Images/img6.svg",
                         2: "Resources/Images/img7.svg",
@@ -73,7 +73,7 @@ class App extends Component {
                         files:["Fancy Gear", "Tentacles", "Dragon", "Flower"]
 
                     },
-                    Category3: {
+                    Radix: {
                         0: "Resources/Images/img9.svg",
                         1: "Resources/Images/img10.svg",
                         2: "Resources/Images/img11.svg",
@@ -83,31 +83,21 @@ class App extends Component {
                     },
                 }
             },
-            soundCurrentCat: "Category1",
-            imageCurrentCat: "Category1",
-            textCurrentCat: "Category1",
+            soundCurrentCat: "Space",
+            imageCurrentCat: "Savannah",
+            textCurrentCat: "Fifty",
 
             soundCurrentFile: "0",
             imageCurrentFile: "0",
             textCurrentFile: "0",
         }
-        // console.log(this.state)
         this.onChangeCategory = this.onChangeCategory.bind(this)
         this.onChangeFile = this.onChangeFile.bind(this)
     }
 
-    componentDidMount() {
-        /*
-        this.setState({
-            soundCurrentCat: Object.keys(this.state.files.sound)[0],
-            imageCurrentCat: Object.keys(this.state.files.image)[0],
-            textCurrentCat: Object.keys(this.state.files.text)[0],
-        })
-        console.log(this.state)
-        */
-    }
-
 	onChangeCategory(e) {
+        // As we want to have three different categories we either need three different functions which are identical except 
+        // the file type changed, or make a variable like this. The variable is equal "text"/"sound"/"image" + "CurrentCat"
         let currentCat = e[0] + "CurrentCat"
         console.log(e,' cat')
         this.setState({
@@ -117,6 +107,8 @@ class App extends Component {
     }
 
     onChangeFile(e) {
+        // Changed the current file to the composition number. E.g. 0 for comp 0, 1 for comp 1 etc. This makes it easy
+        // to expand the code in the future
         this.setState({
             "textCurrentFile": e[1],
             "soundCurrentFile": e[1],
@@ -125,8 +117,6 @@ class App extends Component {
     }
 
     render() {
-        let that = this
-        console.log(this.state)
         return (<div className="App">
             <div className="grid-container">
             <div className="flex-container grid-item">
@@ -142,9 +132,8 @@ class App extends Component {
                     <Categories category={ category }
                                 categories= { this.state.files }
                                 onChangeCategory={this.onChangeCategory}/>) }
-            </div>
 
-            {/* <div className="media"> */}
+            </div>
                 <Media
                 categories={this.state.files}
                 textCurrentCat={this.state.textCurrentCat}
@@ -153,9 +142,8 @@ class App extends Component {
                 soundCurrentFile={this.state.soundCurrentFile}
                 imageCurrentCat={this.state.imageCurrentCat}
                 imageCurrentFile={this.state.imageCurrentFile}/>
-            {/* </div> */}
-
             <div className="files grid-item">
+
                 {/* { Object.keys(this.state.files).map(
                     // Curse this function. Requires the use of that = this
                     function(type){
@@ -170,7 +158,7 @@ class App extends Component {
                     sound={this.state.files['sound'][this.state.soundCurrentCat]}
                     image={this.state.files['image'][this.state.imageCurrentCat]}
                     text={this.state.files['text'][this.state.textCurrentCat]}
-                    onChangeFile={that.onChangeFile} />
+                    onChangeFile={this.onChangeFile} />
             </div>
             </div>
         </div>);
