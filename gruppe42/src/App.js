@@ -11,21 +11,21 @@ class App extends Component {
         this.state = {
             files: {
                 sound: {
-                    Category1: {
+                    Space: {
                         0: "Resources/Sound/buzz.mp3",
                         1: "Resources/Sound/cyberrace.mp3",
                         2: "Resources/Sound/desertshimmer.mp3",
                         3: "Resources/Sound/funmusic.mp3",
                         files:["Buzz", "Cyberrace", "Desert", "Fun"]
                     },
-                    Category2: {
+                    Circus: {
                         0: "Resources/Sound/goofymusic.mp3",
                         1: "Resources/Sound/melodyloopmix.mp3",
                         2: "Resources/Sound/musicbox.mp3",
                         3: "Resources/Sound/musicboxmelody1.mp3",
                         files:["Goofy", "Mix", "Box", "Melody"]
                     },
-                    Category3: {
+                    Mystical: {
                         0: "Resources/Sound/mysticalmusic.mp3",
                         1: "Resources/Sound/narimasumusicfestival.mp3",
                         2: "Resources/Sound/obonfestivalmusic.mp3",
@@ -34,21 +34,21 @@ class App extends Component {
                     }
                 },
                 text: {
-                    Category1: {
+                    Fifty: {
                         0: "Resources/Text/fifty-five.json",
                         1: "Resources/Text/fifty-four.json",
                         2: "Resources/Text/fifty-four2.json",
                         3: "Resources/Text/fifty.json",
                         files:["Grounded", "Redecorate", "Favors", "Waters"]
                     },
-                    Category2: {
+                    Forty: {
                         0: "Resources/Text/forty-five.json",
                         1: "Resources/Text/forty-five2.json",
                         2: "Resources/Text/forty-seven.json",
                         3: "Resources/Text/thirty-eight.json",
                         files:["Pleasure", "Music", "Desert", "Beauty"]
                     },
-                    Category3: {
+                    Thirty: {
                         0: "Resources/Text/thirty-five.json",
                         1: "Resources/Text/thirty-four.json",
                         2:"Resources/Text/thirty-nine.json",
@@ -57,7 +57,7 @@ class App extends Component {
                     }
                 },
                 image: {
-                    Category1: {
+                    Savannah: {
                         0: "Resources/Images/img1.svg",
                         1: "Resources/Images/img2.svg",
                         2: "Resources/Images/img3.svg",
@@ -65,7 +65,7 @@ class App extends Component {
                         files:["Flower", "London2012", "Circle Tree", "Elephant"]
 
                     },
-                    Category2: {
+                    Fractals: {
                         0: "Resources/Images/img5.svg",
                         1: "Resources/Images/img6.svg",
                         2: "Resources/Images/img7.svg",
@@ -73,7 +73,7 @@ class App extends Component {
                         files:["Fancy Gear", "Tentacles", "Dragon", "Flower"]
 
                     },
-                    Category3: {
+                    Radix: {
                         0: "Resources/Images/img9.svg",
                         1: "Resources/Images/img10.svg",
                         2: "Resources/Images/img11.svg",
@@ -83,9 +83,9 @@ class App extends Component {
                     },
                 }
             },
-            soundCurrentCat: "Category1",
-            imageCurrentCat: "Category1",
-            textCurrentCat: "Category1",
+            soundCurrentCat: "Space",
+            imageCurrentCat: "Savannah",
+            textCurrentCat: "Fifty",
 
             soundCurrentFile: "0",
             imageCurrentFile: "0",

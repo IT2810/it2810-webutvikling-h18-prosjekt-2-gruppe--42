@@ -7,7 +7,7 @@ class Categories extends Component {
         super(props)
         this.state = {
           categories: [],
-          active: "Category1"
+          active: ["Space", "Fifty", "Savannah"]
         };
         //console.log(this.props)
         this.onHandleChangeCategory = this.onHandleChangeCategory.bind(this)
@@ -31,7 +31,7 @@ class Categories extends Component {
         <h5 className="category-name">{ this.props.category[0].toUpperCase()+this.props.category.slice(1, this.props.category.length)}</h5>
         {this.state.categories.map((i, x) => 
             <button 
-            className={this.state.active === i ? "category-buttons active-cat" : "category-buttons"} 
+            className={this.state.active.includes(i) ? "category-buttons active-cat" : "category-buttons"} 
             key={x} 
             value={i} 
             onClick={this.onHandleChangeCategory}> {i} </button>)
