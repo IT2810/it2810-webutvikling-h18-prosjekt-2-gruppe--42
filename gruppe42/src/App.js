@@ -128,13 +128,13 @@ class App extends Component {
             </div>
 
             <div className="category grid-item">
-                { Object.keys(this.state.files).map(category =>
-                    <Categories category={ category }
+                { Object.keys(this.state.files).map((category, i)=>
+                    <Categories key={i} category={ category }
                                 categories= { this.state.files }
                                 onChangeCategory={this.onChangeCategory}/>)
                 }
             </div>
-                <Media
+                <Media key={10123}
                 categories={this.state.files}
                 textCurrentCat={this.state.textCurrentCat}
                 textCurrentFile={this.state.textCurrentFile}
