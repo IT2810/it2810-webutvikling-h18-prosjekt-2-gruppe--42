@@ -11,6 +11,7 @@ class Media extends Component {
 
     componentDidMount() {
         // console.log(this.props.categories["text"][this.props.textCurrentCat][this.props.textCurrentFile], this.props.textCurrentCat)
+        // 
         fetch(this.props.categories["text"][this.props.textCurrentCat][this.props.textCurrentFile]).then(res => res.json() )
         .then(
             res => this.setState({'text':res.text})
@@ -26,8 +27,13 @@ class Media extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
+        // Updates the current state if any changes have been made
+        // Needed because of the scope of anonymous functions 
         let that = this
         document.getElementById("player").pause()
+        // Checks if the update has changed anything in compared to the current state and then updates if needed
+        // If these checks were not here we would end up with an endless loop as  the component would be updated and
+        // therefore run this code again. Then your computer would be an expensive heater
         if(prevState.sound !== this.props.categories['sound'][this.props.soundCurrentCat][this.props.soundCurrentFile] ){
             this.setState({sound:this.props.categories['sound'][this.props.soundCurrentCat][this.props.soundCurrentFile]})
             document.getElementById("player").load()

@@ -91,23 +91,13 @@ class App extends Component {
             imageCurrentFile: "0",
             textCurrentFile: "0",
         }
-        // console.log(this.state)
         this.onChangeCategory = this.onChangeCategory.bind(this)
         this.onChangeFile = this.onChangeFile.bind(this)
     }
 
-    componentDidMount() {
-        /*
-        this.setState({
-            soundCurrentCat: Object.keys(this.state.files.sound)[0],
-            imageCurrentCat: Object.keys(this.state.files.image)[0],
-            textCurrentCat: Object.keys(this.state.files.text)[0],
-        })
-        console.log(this.state)
-        */
-    }
-
 	onChangeCategory(e) {
+        // As we want to three different categories we either need three different functions which are identical except 
+        // the file type changed, or make a variable like this. The variable is equal "text"/"sound"/"image" + "CurrentCat"
         let currentCat = e[0] + "CurrentCat"
         console.log(e,' cat')
         this.setState({
@@ -117,6 +107,8 @@ class App extends Component {
     }
 
     onChangeFile(e) {
+        // Changed the current file to the composition number. E.g. 0 for comp 0, 1 for comp 1 etc. This makes it easy
+        // to expand the code in the future
         this.setState({
             "textCurrentFile": e[1],
             "soundCurrentFile": e[1],
@@ -125,8 +117,6 @@ class App extends Component {
     }
 
     render() {
-        let that = this
-        console.log(this.state)
         return (<div className="App grid-container">
             <div className="grid-container">
             <div className="flex-container grid-item">
@@ -142,9 +132,8 @@ class App extends Component {
                     <Categories category={ category }
                                 categories= { this.state.files }
                                 onChangeCategory={this.onChangeCategory}/>) }
-            </div>
 
-            {/* <div className="media"> */}
+            </div>
                 <Media
                 categories={this.state.files}
                 textCurrentCat={this.state.textCurrentCat}
@@ -153,9 +142,8 @@ class App extends Component {
                 soundCurrentFile={this.state.soundCurrentFile}
                 imageCurrentCat={this.state.imageCurrentCat}
                 imageCurrentFile={this.state.imageCurrentFile}/>
-            {/* </div> */}
-
             <div className="files grid-item">
+
                 {/* { Object.keys(this.state.files).map(
                     // Curse this function. Requires the use of that = this
                     function(type){
@@ -170,7 +158,7 @@ class App extends Component {
                     sound={this.state.files['sound'][this.state.soundCurrentCat]}
                     image={this.state.files['image'][this.state.imageCurrentCat]}
                     text={this.state.files['text'][this.state.textCurrentCat]}
-                    onChangeFile={that.onChangeFile} />
+                    onChangeFile={this.onChangeFile} />
             </div>
             </div>
         </div>);
