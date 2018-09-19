@@ -96,7 +96,7 @@ class App extends Component {
     }
 
 	onChangeCategory(e) {
-        // As we want to three different categories we either need three different functions which are identical except 
+        // As we want to have three different categories we either need three different functions which are identical except 
         // the file type changed, or make a variable like this. The variable is equal "text"/"sound"/"image" + "CurrentCat"
         let currentCat = e[0] + "CurrentCat"
         console.log(e,' cat')
