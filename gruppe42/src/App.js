@@ -131,8 +131,8 @@ class App extends Component {
                 { Object.keys(this.state.files).map(category =>
                     <Categories category={ category }
                                 categories= { this.state.files }
-                                onChangeCategory={this.onChangeCategory}/>) }
-
+                                onChangeCategory={this.onChangeCategory}/>)
+                }
             </div>
                 <Media
                 categories={this.state.files}
@@ -143,17 +143,6 @@ class App extends Component {
                 imageCurrentCat={this.state.imageCurrentCat}
                 imageCurrentFile={this.state.imageCurrentFile}/>
             <div className="files grid-item">
-
-                {/* { Object.keys(this.state.files).map(
-                    // Curse this function. Requires the use of that = this
-                    function(type){
-                        return Object.keys(that.state.files[type]).filter(cat => cat == that.state[type
-                            + "CurrentCat"]).map(cat => <Files
-                            category={cat} type={type}
-                            categories={that.state.files}
-                            onChangeFile={that.onChangeFile} />)
-                    })
-                } */}
                 <Files
                     sound={this.state.files['sound'][this.state.soundCurrentCat]}
                     image={this.state.files['image'][this.state.imageCurrentCat]}
