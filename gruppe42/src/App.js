@@ -127,7 +127,7 @@ class App extends Component {
     render() {
         let that = this
         console.log(this.state)
-        return (<div className="App grid-container">
+        return (<div className="App">
             <div className="grid-container">
             <div className="flex-container grid-item">
                     <h1>
