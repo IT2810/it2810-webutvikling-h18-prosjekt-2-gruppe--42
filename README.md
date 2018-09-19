@@ -32,6 +32,8 @@ Ultimately this methodology proved useful as it gave each group member a good st
 Workflow
 We used Git as our version control system. Using GitHub was mandatory for the course, and was used to track code changes and feature branches as well as issues related to new features and code improvements.
 
+### Git
+
 On GitHub, issues were created to allow us to see what features still needed to be implemented or if there were any bugs or issues with existing code that needed to be fixed.
 Overall this presented an effective method of allowing us to track progress throughout the project as we were able to get an overview of what had been done, and what needed to be done.
 
