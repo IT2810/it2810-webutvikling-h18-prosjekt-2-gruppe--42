@@ -117,7 +117,7 @@ class App extends Component {
     }
 
     render() {
-        return (<div className="App grid-container">
+        return (<div className="App">
             <div className="grid-container">
             <div className="flex-container grid-item">
                     <h1>
