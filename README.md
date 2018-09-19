@@ -1,3 +1,13 @@
+The project is made in with node v8.11.3 and React v5.6.0. It might not work with previous versions.
+```
+ git clone repo
+ cd it2810-webutvikling-h18-prosjekt-2-gruppe--42/gruppe42
+ npm install
+ npm start
+```
+
+
+
 # Documentation
 
 ## Javascript
@@ -43,3 +53,4 @@ In general branches were used as a way to facilitate group members working in di
 
 ## Testing (@channel)
 * At du i dokumentasjonen skal kunne beskrive hvordan grensesnittet er planlagt å oppføre seg /se ut på forskjellige skjermstørrelser/enheter og beskriver hvordan du har testet for å avdekke mulig feil eller avvikende oppførsel. 
+* Skriv det inn i README.md fila sammen med resten av dokumentasjonen. Beskriv målsettingen for testing, hvordan det ble utført og omfang (typer enheter etc).  Dette er en litt uformell brukertesting og målet er jo at dere skal bli kjent med responsiv design. Hvis de som evaluerer oppdager feil så er det jo greit hvis dere f.eks. kan dokumentere at dere ikke har testet for denne enheten.
