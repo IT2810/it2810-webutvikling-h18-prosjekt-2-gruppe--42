@@ -15,7 +15,7 @@ class Files extends Component {
 	onHandleChangeFile(e) {
     // Calls App.js's onChangeFile funtion with the new files and updates current state
 		this.props.onChangeFile([this.props.type, e.target.value])
-    this.setState({active:e.target.value})
+        this.setState({active:e.target.value})
 	}
 
   render() {
@@ -23,7 +23,6 @@ class Files extends Component {
       <div className="Files">
         {
           Object.keys(this.state.Compositions).map((i, x) =>
-            // <span classname= "composition-button-span">
                 <button 
                 className={parseInt(this.state.active, 10) === parseInt(i, 10) ? "composition-button activeComp" : "composition-button" } 
                 key={x} 
@@ -31,7 +30,6 @@ class Files extends Component {
                 onClick={this.onHandleChangeFile}>
                 Combo #{parseInt(i,10) + 1}
                 </button>
-            // </span>)
         )
         }
       </div>

@@ -6,24 +6,25 @@ class Categories extends Component {
     constructor(props) {
         super(props)
         this.state = {
-          categories: [],
-          active: ["Space", "Fifty", "Savannah"]
+            categories: [],
+            active: ["Space", "Fifty", "Savannah"]
         };
-        //console.log(this.props)
         this.onHandleChangeCategory = this.onHandleChangeCategory.bind(this)
     }
 
     componentDidMount() {
-      this.setState( {
-        categories: Object.keys(this.props.categories[this.props.category]),
-        category: this.props.category}
-        )
+        this.setState({
+            categories: Object.keys(this.props.categories[this.props.category]),
+            category: this.props.category
+        })
     }
 
-	onHandleChangeCategory(e) {
-    this.props.onChangeCategory([this.state.category, e.target.value])
-    this.setState({active:e.target.value})
-	}
+    onHandleChangeCategory(e) {
+        this.props.onChangeCategory([this.state.category, e.target.value])
+        this.setState({
+            active: e.target.value
+        })
+    }
 
   render() {
     return (
@@ -35,7 +36,6 @@ class Categories extends Component {
             key={x} 
             value={i} 
             onClick={this.onHandleChangeCategory}> {i} </button>)
-            // console.log(parseInt(this.state.active, 10) === parseInt(i, 10) ? "category-buttons active-cat" : "category-buttons", x, this.state.active))
        }	
       </div>
     );
