@@ -5,7 +5,7 @@
 .composition-button {
     display: inline;
     margin: auto;
-    background-color:lightblue;
+    background-color:var(--button-bg-color);
     border:none;
     width:100%;
     height:30px;
@@ -13,15 +13,15 @@
 
 }
 .activeComp{
-    background-color:#4F759B;
-    color:white;
+    background-color:var(--button-active-color);
+    color:var(--text-color);
 }
 
 .composition-button:hover{
-    background-color:lightpink;
+    background-color:var(--button-hover-color);
 }
 .composition-button:active{
-    background-color:pink;
+    background-color:var(--button-bg-color);
 }
 
 .composition-button-span {

@@ -4,26 +4,26 @@
     /* margin-right:0t; */
     /* margin-top: 5px; */
     /* margin-bottom:5px; */
-    background-color:#25283D;
+    background-color:var(--accent-color);
     border: none;
     text-align: left;
     width: 100%;
     overflow: hidden;
     font-size: 10pt;
     min-width: 80px;
-    color: white;
+    color: var(--text-color);
     padding: 8px 15px 8px 10px;
 }
 
 .category-buttons:hover{
-    background-color:lightpink;
+    background-color:var(--button-hover-color);
 }
 .category-buttons:active{
-    background-color:red;
+    background-color:var(--button-bg-color);
 }
 
 .active-cat{
-    background-color: lightblue;
+    background-color: var(--button-active-color);
 }
 
 .category-name{
