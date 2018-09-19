@@ -91,9 +91,9 @@ class Media extends Component {
             </audio>
         )
         return([
-                (<div key={123} className="grid-item image" dangerouslySetInnerHTML={{'__html':this.state.image}}>
+                (<div key={1} className="grid-item image" dangerouslySetInnerHTML={{'__html':this.state.image}}>
                 </div>),
-                (<div key={1357} className="grid-item text">
+                (<div key={12} className="grid-item text">
                     {this.state.text}
                     <div>
                         {audio}

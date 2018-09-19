@@ -134,7 +134,7 @@ class App extends Component {
                                 onChangeCategory={this.onChangeCategory}/>)
                 }
             </div>
-                <Media key={10123}
+                <Media
                 categories={this.state.files}
                 textCurrentCat={this.state.textCurrentCat}
                 textCurrentFile={this.state.textCurrentFile}
