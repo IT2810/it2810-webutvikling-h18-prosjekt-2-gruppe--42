@@ -6,7 +6,9 @@
     --button-active-color: #1b5e20;
     --button-hover-color: #a5d6a7;
 
-    --text-color: white;
+	--category-name-color: #1b5e20;
+	--text-color: white;
+
 }
 
 body{

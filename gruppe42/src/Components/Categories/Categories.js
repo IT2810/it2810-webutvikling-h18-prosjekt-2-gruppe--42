@@ -29,7 +29,7 @@ class Categories extends Component {
   render() {
     return (
       <div className="Categories">
-        <h5 className="category-name">{ this.props.category[0].toUpperCase()+this.props.category.slice(1, this.props.category.length)}</h5>
+        <h5 className="category-name">{ this.props.category.toUpperCase()}</h5>
         {this.state.categories.map((i, x) => 
             <button 
             className={this.state.active.includes(i) ? "category-buttons active-cat" : "category-buttons"} 
