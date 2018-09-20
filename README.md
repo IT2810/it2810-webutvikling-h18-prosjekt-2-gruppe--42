@@ -56,6 +56,7 @@ The goal of testing were making the website work on devices that the team had. T
 
 Computer
 * Chrome/Edge: The body is too big, you have to scroll to the side.
+
 Tablet
 * Vertical: Buttons and div for categories is reaching to far to the right. 
 * Horizontal: Found that gap between grid-items were a bit off on different items. This also applied to desktop-size.  
