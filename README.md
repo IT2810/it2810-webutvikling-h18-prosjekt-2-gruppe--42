@@ -55,13 +55,13 @@ In general branches were used as a way to facilitate group members working in di
 The goal of testing were making the website work on devices that the team had. These devices were primarly android phones by HUAWEI and SAMSUNG Galaxy 7 and 8. We also tested the website on Chrome and Edge. Since none of us had an iOS-running phone or computer, this was not prioritized in such a small project. By using inspection-mode we tested the webside on tablet-size. The main differences between desktop- and mobile-mode were number of columns in the grid. On the desktop there is three columns, to make the image and text on one line. On mobile there is only two columns to make the user scroll down to see image and text on top of each other. The following is what we found during testing: 
 
 Computer
-	- Chrome/Edge: The body is too big, you have to scroll to the side.
+* Chrome/Edge: The body is too big, you have to scroll to the side.
 Tablet
-	- Vertical: Buttons and div for categories is reaching to far to the right. 
-	- Horizontal: Found that gap between grid-items were a bit off on different items. This also applied to desktop-size.  
+* Vertical: Buttons and div for categories is reaching to far to the right. 
+* Horizontal: Found that gap between grid-items were a bit off on different items. This also applied to desktop-size.  
 	
 Mobile
-	- Had to zoom out to see the whole picture. Smaller gaps and margin is required. Category-buttons are way to big in width. 
+* Had to zoom out to see the whole picture. Smaller gaps and margin is required. Category-buttons are way to big in width. 
 	
 Summary of testing: All functions worked well. The only things to fix were small css-changes. This was mostly aligning images and buttons better on the screen and make text more readable. We think the responsive design is working well for the website to be used on the tested devices.
 
