@@ -1,6 +1,6 @@
 The project is made in with node v8.11.3 and React v5.6.0. It might not work with previous versions.
 ```
- git clone https://github.com/IT2810/it2810-webutvikling-h18-prosjekt-2-gruppe--42.git
+ git clone git@github.com:IT2810/it2810-webutvikling-h18-prosjekt-2-gruppe--42.git
  cd it2810-webutvikling-h18-prosjekt-2-gruppe--42/gruppe42
  npm install
  npm start
