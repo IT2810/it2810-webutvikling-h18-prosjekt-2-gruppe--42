@@ -25,7 +25,7 @@ As we were not allowed to use any of the popular state management architectures 
 Both CSS-grid and Flexbox were used as it is two solutions that complement each other well. The solution makes it easier to specify areas of the userinterface relative to each other. For example when using a computer we wished to place the image and text next to each other, categories on the left covering two rows, header on top and combinations under the header, but to the right of the categories. By using the grid, this was easy to make. Since Flexbox is used for one-dimensional layout (unlike the grid which is two-dimensional), it was used in the header to easy make a horizontal line with text. 
 	
 ### Media queries
-From CSS3 we used Media Queries with the @media tag to create a responsive design. For example when the max width of the page is 800px we gave the grid-template-columns in.grid-container it’s own size for each column. 
+To make the website responsive, we used mediea queries. With the @media tag we made a max width of 480px to add specific css for mobile use. The biggest differenses here from desktop is that the grid now have two columns instead of three. The image and text is on top of each other, so that the user can scroll down instead to the sides. We also made the grid-items margin and gap smaller to utilize the entire screen. 
 
 ### Files and Resources
 The files used in this project were all licensed for free use. Following resources were collected: 
@@ -52,5 +52,19 @@ In addition commits were tagged with issues, so that it would be easier to go ba
 In general branches were used as a way to facilitate group members working in different features at the same time. Comprehensive features were developed in their own branch, and then merged into the master branch when it was verified that everything was working according to the specification supplied at the beginning of the project. The use of pull requests allowed other members of the group to look at the code and verify that it was working correctly before it was merged into the master branch.
 
 ## Testing (@channel)
+The goal of testing were making the website work on devices that the team had. These devices were primarly android phones by HUAWEI and SAMSUNG Galaxy 7 and 8. We also tested the website on Chrome and Edge. Since none of us had an iOS-running phone or computer, this was not prioritized in such a small project. By using inspection-mode we tested the webside on tablet-size. The main differences between desktop- and mobile-mode were number of columns in the grid. On the desktop there is three columns, to make the image and text on one line. On mobile there is only two columns to make the user scroll down to see image and text on top of each other. The following is what we found during testing: 
+
+Computer
+	- Chrome/Edge: The body is too big, you have to scroll to the side.
+Tablet
+	- Vertical: Buttons and div for categories is reaching to far to the right. 
+	- Horizontal: Found that gap between grid-items were a bit off on different items. This also applied to desktop-size.  
+	
+Mobile
+	- Had to zoom out to see the whole picture. Smaller gaps and margin is required. Category-buttons are way to big in width. 
+	
+Summary of testing: All functions worked well. The only things to fix were small css-changes. This was mostly aligning images and buttons better on the screen and make text more readable. We think the responsive design is working well for the website to be used on the tested devices.
+
+
 * At du i dokumentasjonen skal kunne beskrive hvordan grensesnittet er planlagt å oppføre seg /se ut på forskjellige skjermstørrelser/enheter og beskriver hvordan du har testet for å avdekke mulig feil eller avvikende oppførsel. 
 * Skriv det inn i README.md fila sammen med resten av dokumentasjonen. Beskriv målsettingen for testing, hvordan det ble utført og omfang (typer enheter etc).  Dette er en litt uformell brukertesting og målet er jo at dere skal bli kjent med responsiv design. Hvis de som evaluerer oppdager feil så er det jo greit hvis dere f.eks. kan dokumentere at dere ikke har testet for denne enheten.
