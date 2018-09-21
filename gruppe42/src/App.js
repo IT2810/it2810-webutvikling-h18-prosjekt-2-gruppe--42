@@ -95,8 +95,17 @@ class App extends Component {
         this.onChangeFile = this.onChangeFile.bind(this)
     }
 
+    componentDidMount(){
+        this.setState({
+            soundCurrentCat: Object.keys(this.state.files.sound)[Math.floor(Math.random() * Object.keys(this.state.files.sound).length)],
+            textCurrentCat: Object.keys(this.state.files.text)[Math.floor(Math.random() * Object.keys(this.state.files.text).length)],
+            imageCurrentCat: Object.keys(this.state.files.image)[Math.floor(Math.random() * Object.keys(this.state.files.image).length)],
+
+        })
+    }
+
 	onChangeCategory(e) {
-        // As we want to have three different categories we either need three different functions which are identical except 
+        // As we want to have three different categories we either need three different functions which are identical except
         // the file type changed, or make a variable like this. The variable is equal "text"/"sound"/"image" + "CurrentCat"
         let currentCat = e[0] + "CurrentCat"
         console.log(e,' cat')
@@ -131,6 +140,7 @@ class App extends Component {
                 { Object.keys(this.state.files).map((category, i)=>
                     <Categories key={i} category={ category }
                                 categories= { this.state.files }
+                                active = {[this.state.soundCurrentCat, this.state.textCurrentCat, this.state.imageCurrentCat]}
                                 onChangeCategory={this.onChangeCategory}/>)
                 }
             </div>

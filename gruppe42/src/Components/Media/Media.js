@@ -37,7 +37,7 @@ class Media extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         // Updates the current state if any changes have been made
-        // Needed because of the scope of anonymous functions 
+        // Needed because of the scope of anonymous functions
         let that = this
         document.getElementById("player").pause()
         // Checks if the update has changed anything in compared to the current state and then updates if needed
@@ -74,14 +74,14 @@ class Media extends Component {
                 }
             })
 
-        // Don't think we need this anymore. 
+        // Don't think we need this anymore.
         // It was here becasue of an error which happend when we tried to change file, pause and play all at once.
         // Therefore we ended up with this bad way of preventing the warning
-        /*
+
         setTimeout(function () {
             document.getElementById("player").play()
         }, 150);
-        */
+        
     }
 
     render() {
