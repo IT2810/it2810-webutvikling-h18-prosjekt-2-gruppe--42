@@ -12,7 +12,7 @@ class Media extends Component {
     }
 
     componentDidMount() {
-        // Gets the hardcoded default files when the component has mounted
+        // Gets the randomized default files when the component has mounted
         fetch(this.props.categories["text"][this.props.textCurrentCat][this.props.textCurrentFile])
             .then(res => res.json())
             .then(
