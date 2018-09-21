@@ -48,7 +48,6 @@ class Media extends Component {
                         that.setState({
                             'text': res.text
                         })
-                        console.log(that.state.text)
                     }
                 })
         }
