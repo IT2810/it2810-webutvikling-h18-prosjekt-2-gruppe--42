@@ -8,11 +8,11 @@ class Media extends Component {
     render() {
 
         return([
-                (<Image
+                (<Image key={1246}
                     categories={this.props.categories}
                     imageCurrentCat={this.props.imageCurrentCat}
                     imageCurrentFile={this.props.imageCurrentFile}/>),
-                (<TextAudio                 
+                (<TextAudio key={12364}
                     categories={this.props.categories}
                     textCurrentCat={this.props.textCurrentCat}
                     textCurrentFile={this.props.textCurrentFile}
