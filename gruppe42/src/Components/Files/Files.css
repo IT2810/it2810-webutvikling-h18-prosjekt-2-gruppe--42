@@ -29,10 +29,10 @@
 }
 
 .composition-button:first-of-type{
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .composition-button:last-of-type{
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }

@@ -1,5 +1,5 @@
 :root{
-    --main-bg-color:  #e0e0e0;
+    --main-bg-color: #FAFAFA;
 	--accent-color: #66bb6a;
 	--image-bg-color: white;
 
@@ -43,10 +43,11 @@ svg {
 
 
 .grid-item {
-	border-radius: 1em;
+	border-radius: 5px;
 	background-color:  var(--main-bg-color);
 	margin: 0.5em;
 	/* padding: 0.5em; */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	background-color: var(--accent-color);
 }
 
