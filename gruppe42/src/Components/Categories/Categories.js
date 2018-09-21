@@ -20,6 +20,7 @@ class Categories extends Component {
     }
 
     onHandleChangeCategory(e) {
+        // Calls App.js's onChangeCategory funtion with the new categories and updates current state
         this.props.onChangeCategory([this.state.category, e.target.value])
         this.setState({
             active: e.target.value
