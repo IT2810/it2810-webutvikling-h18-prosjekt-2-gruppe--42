@@ -28,7 +28,7 @@ class Files extends Component {
                 key={x} 
                 value={i} 
                 onClick={this.onHandleChangeFile}>
-                Combo #{parseInt(i,10) + 1}
+                Combo {parseInt(i,10) + 1}
                 </button>
         )
         }
