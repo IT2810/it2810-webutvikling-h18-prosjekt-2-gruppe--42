@@ -73,7 +73,7 @@ h1 {
     grid-column:2/4;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 480px) {
 	.grid-container {
 		grid-template-columns: 30vw 68vw;
 		grid-gap: 5px;
@@ -95,26 +95,3 @@ h1 {
 		margin: 0.1em;
 	}
 }
-
-/*for iPhone Portrait*/
-/*@media only screen
-	and (min-width: 320px)
-	and (max-width: 480px)
-	and (-webkit-min-device-pixel-ratio: 2)
-	and (orientation: portrait){
-		.grid-container{
-			background-color: pink;
-			width: 100%;
-		}
-
-}*/
-
-
-/* .media {
-	grid-column: 2;
-	grid-row: 3 / 4;
-} */
-
-/* .media-grid-item{
-	white-space:pre-wrap;
-} */
