@@ -23,7 +23,27 @@
     margin-top:20px;
 }
 
-@media only screen and (max-width: 641px) {
+@media only screen and (max-width: 800px) and (orientation:landscape){
+	#player {
+		/* width: 50%; */
+        display:none;
+	}
+    .text{
+        grid-column:3;
+        grid-row: 3;
+    }
+
+    .grid-container {
+        grid-template-rows: 15vh 15vh 1fr;
+        row-gap:0;
+    }
+
+    .category.grid-item{
+        min-width:75px;
+    }
+}
+
+@media only screen and (max-width: 641px) and (orientation:portrait){
 	#player {
 		/* width: 50%; */
         display:none;

@@ -33,7 +33,7 @@ svg {
 .grid-container {
 	display: grid;
 	grid-template-columns: 10% 40% 1fr;
-	grid-template-rows: 15% 15% 15% 1fr;
+	grid-template-rows: 15% 10% 15% 1fr;
 	background-color: var(--main-bg-color);
 	grid-gap: 20px;
 	color: var(--text-color);
@@ -65,7 +65,7 @@ h1 {
 	grid-column: 1;
 	grid-row: 2 / 4;
 	overflow: hidden;
-	min-width: 50px;
+	min-width: 80px;
 }
 
 /*put combinations in position in desktop*/
@@ -73,6 +73,7 @@ h1 {
     background:inherit;
     grid-row:2;
     grid-column:2/4;
+    /* min-height:75%; */
 }
 
 @media only screen and (max-width: 480px) {
