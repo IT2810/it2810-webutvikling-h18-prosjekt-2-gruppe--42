@@ -13,7 +13,7 @@ The project is made in with node v8.11.3 and React v5.6.0. It might not work wit
 ## Javascript
 
 ### Structure
-We decided to follow a normal React folder structure by having a main CSS and Javascript file, App.js and App.css, in the src folder. We also have a Components folder inside the src folder where we have folders for each of the different components. Inside these individual folders we have the component itself and a CSS file for component specific CSS. This allows us to easily navigate and find files in the project. We should perhaps have kept all of the components and css in the Components folder.
+We decided to follow a normal React folder structure by having a main CSS and Javascript file, App.js and App.css, in the src folder. We also have a Components folder inside the src folder where we have folders for each of the different components. Inside these individual folders we have the component itself and a CSS file for component specific CSS. With the exception of Image and TextAudio components which share a CSS file in the parent component Media.js This allows us to easily navigate and find files in the project. We should perhaps have kept all of the components and css in the Components folder as we have so few components.
 We complied with the instructions to use ajax for loading the images and text. We decided to use the fetch function instead of a library as learning the basics and the limitations of said basics is a good way of learning. This ended up with a lot of head scratching until we found out that we needed to put the resources in the Public folder such that they could be fetched.
 
 ### Callback and state
