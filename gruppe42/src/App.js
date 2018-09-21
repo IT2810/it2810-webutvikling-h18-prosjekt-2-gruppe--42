@@ -108,7 +108,6 @@ class App extends Component {
         // As we want to have three different categories we either need three different functions which are identical except
         // the file type changed, or make a variable like this. The variable is equal "text"/"sound"/"image" + "CurrentCat"
         let currentCat = e[0] + "CurrentCat"
-        console.log(e,' cat')
         this.setState({
             // The [currentCat] forces the key to be treated as a variable when being changed instead of the name currentCat itself
             [currentCat]: e[1]
