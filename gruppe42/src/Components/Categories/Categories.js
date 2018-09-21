@@ -30,13 +30,13 @@ class Categories extends Component {
     return (
       <div className="Categories">
         <h5 className="category-name">{ this.props.category.toUpperCase()}</h5>
-        {this.state.categories.map((i, x) => 
-            <button 
-            className={this.state.active.includes(i) ? "category-buttons active-cat" : "category-buttons"} 
-            key={x} 
-            value={i} 
+        {this.state.categories.map((i, x) =>
+            <button
+            className={this.props.active.includes(i) ? "category-buttons active-cat" : "category-buttons"} 
+            key={x}
+            value={i}
             onClick={this.onHandleChangeCategory}> {i} </button>)
-       }	
+       }
       </div>
     );
   }
