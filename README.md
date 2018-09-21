@@ -21,7 +21,7 @@ As we were not allowed to use any of the popular state management architectures 
 
 
 ## CSS and files
-### CSS-grid og Flexbox
+### CSS-grid and Flexbox
 Both CSS-grid and Flexbox were used as it is two solutions that complement each other well. This solution makes it easier to specify areas of the user interface relative to each other. For example when using a computer we wished to place the image and text next to each other, categories on the left covering two rows, header on top and combinations under the header, but to the right of the categories. By using the grid, this was easy to make. Since Flexbox is used for one-dimensional layout (unlike the grid which is two-dimensional), it was used in the header to easy make a horizontal line with text. We also used Flexbox for the combination-buttons.
 	
 ### Media queries
@@ -52,7 +52,7 @@ In addition commits were tagged with issues, so that it would be easier to go ba
 In general branches were used as a way to facilitate group members working in different features at the same time. Comprehensive features were developed in their own branch, and then merged into the master branch when it was verified that everything was working according to the specification supplied at the beginning of the project. The use of pull requests allowed other members of the group to look at the code and verify that it was working correctly before it was merged into the master branch.
 
 ## Testing (@channel)
-The goal of testing was to make the website work on devices that the team had access to. These devices were primarly Android phones by HUAWEI and SAMSUNG Galaxy 7 and 8. We also tested the website on Chrome and Edge. Since none of us had a phone running iOS nor a computer running macOS, testing for these devices was not prioritized in such a small project. By using inspection-mode we tested the website on tablet-size. The main differences between desktop- and mobile-mode were the number of columns in the grid. On the desktop there is three columns, to make the image and text on one line. On mobile there is only two columns so that the user can scroll down to see image and text on top of each other, which works better with the horizontal layout of a phone. The following is what we found during testing: 
+The goal of testing was to make the website work on devices that the team had access to. These devices were primarly Android phones by HUAWEI and SAMSUNG Galaxy 7 and 8. We also tested the website on Chrome and Edge. Since none of us had a phone running iOS nor a computer running macOS, testing for these devices was not prioritized in such a small project. By using inspection-mode we tested the website on tablet-size. The main differences between desktop- and mobile-mode were the number of columns in the grid. On the desktop there is three columns, to put the image and text in one line. On mobile there is only two columns so that the user can scroll down to see image and text on top of each other, which works better with the horizontal layout of a phone. The following is what we found during testing: 
 
 Computer
 * Chrome/Edge: The body is too big, you have to scroll to the side.
