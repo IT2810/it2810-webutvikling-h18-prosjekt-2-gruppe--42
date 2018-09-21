@@ -23,7 +23,7 @@
     margin-top:20px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 641px) {
 	#player {
 		/* width: 50%; */
         display:none;
