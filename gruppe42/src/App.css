@@ -1,6 +1,7 @@
 :root{
     --main-bg-color:  #e0e0e0;
-    --accent-color: #66bb6a;
+	--accent-color: #66bb6a;
+	--image-bg-color: white;
 
     --button-bg-color: #388e3c;
     --button-active-color: #1b5e20;
