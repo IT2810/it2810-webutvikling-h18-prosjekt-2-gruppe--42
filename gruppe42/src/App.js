@@ -96,6 +96,7 @@ class App extends Component {
     }
 
     componentDidMount(){
+		console.log("Hei")
         this.setState({
             soundCurrentCat: Object.keys(this.state.files.sound)[Math.floor(Math.random() * Object.keys(this.state.files.sound).length)],
             textCurrentCat: Object.keys(this.state.files.text)[Math.floor(Math.random() * Object.keys(this.state.files.text).length)],
